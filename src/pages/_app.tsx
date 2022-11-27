@@ -6,10 +6,18 @@ import { localStorageProvider } from '@utils/localStorageProvider';
 
 import { AuthContextProvider } from '@contexts/AuthContext';
 import { UserContextProvider } from '@contexts/UserContext';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { AnimatePresence } from 'framer-motion';
 import { SWRConfig } from 'swr';
 
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+  },
+});
+
 function MyApp({ Component, pageProps }: AppProps) {
+  const Comp: any = Component;
   return (
     <SWRConfig
       value={{
@@ -19,7 +27,9 @@ function MyApp({ Component, pageProps }: AppProps) {
       <AuthContextProvider>
         <UserContextProvider>
           <AnimatePresence>
-            <Component {...pageProps} />
+            <ThemeProvider theme={darkTheme}>
+              <Comp {...pageProps} />
+            </ThemeProvider>
           </AnimatePresence>
         </UserContextProvider>
       </AuthContextProvider>

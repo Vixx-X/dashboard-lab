@@ -33,6 +33,7 @@ a {
   overflow: hidden;
   background-color: rgba(0, 155, 255, 0.7);
 }
+
 .shim-blue::after {
   position: absolute;
   top: 0;
@@ -102,9 +103,9 @@ a {
   padding-top: 0.5rem;
   padding-right: 2.5rem;
   padding-bottom: 0.5rem;
-  padding-left: 0.75rem;
+  padding-left: 0.5rem;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1;
   background-position: right 0.5rem center;
   background-size: 1.5em 1.5em;
 }
@@ -132,4 +133,14 @@ a {
     transform: translateX(0%);
     opacity: 0;
   }
+}
+
+.FlagSelector ul {
+  background-color: 'black';
+}
+
+label,
+th,
+h2 {
+  text-transform: capitalize !important;
 }

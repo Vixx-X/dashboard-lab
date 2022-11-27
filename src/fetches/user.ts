@@ -8,12 +8,18 @@ import makeFetchOptions, {
 import { makeUrl } from '@utils/makeUrl';
 
 export const getUser = async () => {
-  const resp = await fetcher.get(
-    API_URLS.URL_USER_PROFILE,
-    makeAuthFetchOptions()
-  );
-  await assertApiError(resp);
-  return resp.data;
+  // const resp = await fetcher.get(
+  //   API_URLS.URL_USER_PROFILE,
+  //   makeAuthFetchOptions()
+  // );
+  // await assertApiError(resp);
+  // return resp.data;
+  return {
+    email: 'admin@example.com',
+    username: 'admin',
+    first_name: 'Admin',
+    last_name: 'Root',
+  };
 };
 
 export const postRegisterUser = async (data: any) => {

@@ -10,7 +10,9 @@ export const SERVER_URLS = {
 
   // home
   URL_LANDING: '/',
-  URL_HOME: '/home',
+  URL_MARKETING: '/marketing',
+  URL_HUMAN_RESOURCES: '/human-resources',
+  URL_CONFIG: '/user/config',
 };
 
 export default SERVER_URLS;

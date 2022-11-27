@@ -21,6 +21,5 @@ export const makeUrl = (
       return carry;
     }, [])
     .join('&');
-
   return !queryString ? result : `${result}?${queryString}`;
 };

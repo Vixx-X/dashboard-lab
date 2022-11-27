@@ -41,7 +41,7 @@ const OTPForm = ({
       if (!Object.prototype.hasOwnProperty.call(info, 'token')) {
         toggleOTP(false);
       }
-      setStatus(exception.data);
+      setStatus(exception.data.detail);
     } finally {
       setLoading(false);
     }
@@ -64,7 +64,7 @@ const OTPForm = ({
 
       toggleOTP(true);
     } catch (exception: any) {
-      setStatus(exception.data);
+      setStatus(exception.data.detail);
     }
   };
 

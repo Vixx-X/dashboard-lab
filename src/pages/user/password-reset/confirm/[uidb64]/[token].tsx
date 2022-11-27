@@ -44,7 +44,7 @@ const PasswordResetConfirm = ({
     try {
       await postResetPasswordConfirm(values, uidb64, token);
     } catch (exception: any) {
-      setStatus(exception.data);
+      setStatus(exception.data.detail);
     } finally {
       setLoading(false);
     }

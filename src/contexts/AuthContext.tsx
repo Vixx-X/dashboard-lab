@@ -14,8 +14,8 @@ export const AuthContextProvider = ({ children }: Props) => {
   const next = router.query?.next as string;
 
   const nextRedirect = () =>
-    router.push(next ? filterOpenRedirect(next) : SERVER_URLS.URL_HOME);
-  const landingRedirect = () => router.push(SERVER_URLS.URL_LANDING);
+    router.push(next ? filterOpenRedirect(next) : SERVER_URLS.URL_LANDING);
+  const landingRedirect = () => router.push(SERVER_URLS.URL_LOGIN);
 
   useEffect(() => {
     update(nextRedirect, landingRedirect);

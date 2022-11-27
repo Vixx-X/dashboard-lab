@@ -1,4 +1,5 @@
 import { _authStore } from '@stores/AuthStore';
+import { _userStore } from '@stores/UserStore';
 
 import { AxiosRequestConfig, AxiosRequestHeaders } from 'axios';
 
@@ -6,12 +7,14 @@ export function _makeFetchOptions(
   options: AxiosRequestConfig = {},
   auth: string | null = null
 ) {
+  const user = _userStore.getState();
   const ret: AxiosRequestConfig = {
     withCredentials: true,
     ...options,
     headers: {
-      'Content-Type': 'application/json',
       // 'Content-Type': 'application/x-www-form-urlencoded',
+      'Content-Type': 'application/json',
+      'Accept-Language': user.lang ?? 'es',
     },
   };
 

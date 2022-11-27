@@ -60,7 +60,7 @@ const Registro: NextPage = () => {
       await login(values.username, values.password1);
       setStatus({});
     } catch (exception: any) {
-      setStatus(exception.data);
+      setStatus(exception.data.detail);
       setLoading(false);
     }
   };

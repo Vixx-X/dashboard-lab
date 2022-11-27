@@ -100,7 +100,6 @@ const errResp = (error: AxiosError) => {
   } else {
     // Something happened in setting up the request that triggered an Error
     // THIS SHOULD NEVER HAPPEN IF YOU CODE OK
-    console.log('Error >:(', error.message);
   }
   return {
     data: error?.response?.data,

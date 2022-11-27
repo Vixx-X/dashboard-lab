@@ -1,11 +1,18 @@
 import { Form as FForm, Formik, FormikConfig, FormikValues } from 'formik';
 
+import AutoSubmit from './AutoSubmit';
+
+interface FormProps extends FormikConfig<FormikValues> {
+  autoSubmit?: boolean;
+}
+
 export const Form = ({
   children,
   initialValues,
   onSubmit,
+  autoSubmit,
   ...props
-}: FormikConfig<FormikValues>) => {
+}: FormProps) => {
   return (
     <Formik
       initialValues={initialValues}
@@ -13,7 +20,12 @@ export const Form = ({
       enableReinitialize
       {...props}
     >
-      <FForm>{children}</FForm>
+      <FForm>
+        <>
+          {children}
+          {autoSubmit && <AutoSubmit />}
+        </>
+      </FForm>
     </Formik>
   );
 };
