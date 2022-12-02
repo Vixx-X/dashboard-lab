@@ -12,6 +12,7 @@
     "^@context/(.*)$",
     "^@fetches/(.*)$",
     "^@hooks/(.*)$",
+    "^@mappers/(.*)$",
     "^@pages/(.*)$",
     "^@public/(.*)$",
     "^@stores/(.*)$",

@@ -14,6 +14,7 @@
       "@styles/*": ["styles/*"],
       "@utils/*": ["utils/*"],
       "@fetches/*": ["fetches/*"],
+      "@mappers/*": ["mappers/*"],
       "*": ["types/*.d.ts"]
     },
     "target": "es5",
